@@ -31,6 +31,9 @@ public class HomeController {
     @Autowired
     private SkillRepository skillRepository;
 
+    public HomeController() {
+    }
+
     @RequestMapping("")
     public String index(Model model) {
 
