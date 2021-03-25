@@ -11,7 +11,7 @@ skills VARCHAR(255)
 
 SELECT employer.name
 FROM employer
-WHERE employer.location = "St. Louis City";
+WHERE employer.location = "Stl";
 
 ## Part 3: Test it with SQL
 
@@ -22,5 +22,5 @@ DROP table job;
 SELECT job.name, skill.description
 FROM skill, job
 INNER JOIN job_skills ON job.id = job_skills.jobs_id
-WHERE skill.id = job_skills.skills_id
+WHERE skill.id is not null
 ORDER BY job.name ASC;
